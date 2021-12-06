@@ -1,0 +1,41 @@
+/* Соц сети */
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: $social;
+
+  @include transition(fill);
+}
+
+.team-social {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $white;
+  @extend %centered;
+  @include transition(background-color);
+}
+
+.social-ul {
+  margin-right: 32px;
+  margin-left: 32px;
+  margin-bottom: 30px;
+}
+
+.social-ul > li:not(:last-child),
+.connect-list > li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link:hover .team-social,
+.social-link:focus .team-social,
+.social-link:hover .connect-social,
+.social-link:focus .connect-social {
+  background-color: $hover;
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: $white;
+}

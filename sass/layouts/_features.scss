@@ -1,0 +1,39 @@
+// Оформление раздела особенности
+.features {
+  padding-top: 94px;
+
+  .item {
+    max-width: 270px;
+  }
+
+  .list {
+    @extend %flex-wrap;
+  }
+
+  .item {
+    width: calc((100% - 90px) / 4);
+  }
+
+  .item:not(:nth-child(4n)) {
+    margin-right: 30px;
+  }
+
+  .item:not(:nth-last-child(-n + 4)) {
+    margin-bottom: 30px;
+  }
+}
+
+.features p,
+.team p {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.feature-img {
+  @extend %centered;
+  width: 270px;
+  height: 120px;
+  background-color: $light-grey;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}

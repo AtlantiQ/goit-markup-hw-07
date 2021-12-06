@@ -1,0 +1,112 @@
+// Оформление футера
+
+.footer-nav {
+  background-color: $background;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.address {
+  color: $white;
+
+  @include transition(color);
+}
+
+.info {
+  color: $rgba-footer;
+
+  @include transition(color);
+}
+
+/* Стили для адреса в футере */
+.adress-list {
+  display: inline-block;
+  font-style: normal;
+  width: 231px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.footer-nav .item + .item {
+  margin-top: 9px;
+}
+
+.tittle-connect,
+.subscribe-tittle {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $white;
+  margin-bottom: 20px;
+}
+
+.fotter-all {
+  display: flex;
+  justify-content: space-between;
+}
+
+.connect-list {
+  display: flex;
+}
+
+.connect-icon {
+  width: 20px;
+  height: 20px;
+  fill: $white;
+}
+
+.connect-social {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $conect-icon;
+  @extend %centered;
+  @include transition(background-color);
+}
+
+/* инпут в футере */
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+
+  margin-right: 12px;
+  padding-left: 16px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  align-items: center;
+  color: $footer-rgba;
+}
+
+.subscribe .button.ftb {
+  position: relative;
+
+  margin-top: 0px;
+  padding-right: 63px;
+  background-color: $conect-icon;
+  @include transition(background-color);
+}
+
+.button.ftb:hover,
+.button.ftb:focus {
+  background-color: $hover;
+}
+
+.icon-sub {
+  position: absolute;
+  top: 50%;
+  right: 29px;
+  transform: translateY(-50%);
+
+  fill: $white;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}

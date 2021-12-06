@@ -1,0 +1,92 @@
+// Стили хедера
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
+.flexing {
+  display: flex;
+  align-items: center;
+}
+
+.head-nav {
+  margin-left: 93px;
+  .item + .item {
+    margin-left: 50px;
+  }
+
+  .link {
+    color: $black;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    @include transition(color);
+  }
+  .item {
+    position: relative;
+  }
+
+  .current::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background: $hover;
+    border-radius: 2px;
+
+    position: absolute;
+    left: 0;
+    bottom: -28.5px;
+  }
+}
+
+.contacts {
+  margin-left: auto;
+
+  .item + .item {
+    margin-left: 50px;
+  }
+
+  .link {
+    color: $grey;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    @include transition(color);
+  }
+
+  &-icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    margin-right: 10px;
+
+    @include transition(fill);
+  }
+}
+
+/* Стили для шапки */
+.head-nav .link:hover,
+.headn-av .link:focus,
+.contacts .link:hover,
+.contacts .link:focus,
+.head-nav .current,
+.address:hover,
+.address:focus,
+.info:hover,
+.info:focus,
+.logo-blue {
+  color: $hover;
+}
+
+.contacts .link:hover .contacts-icon,
+.contacts .link:focus .contacts-icon,
+.close-button:hover .close-x,
+.close-button:focus .close-x {
+  fill: $hover;
+}
